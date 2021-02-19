@@ -21,9 +21,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('projects', [ProjectController::class, 'index']);
-Route::post('projects', [ProjectController::class, 'store']);
-Route::get('projects/{id}', [ProjectController::class, 'show']);
-Route::put('projects', [ProjectController::class, 'markAsCompleted']);
-Route::get('tasks', [TaskController::class, 'store']);
-Route::get('tasks/{task}', [TaskController::class, 'markAsCompleted']);
+Route::get('/projects', [ProjectController::class, 'index']);
+Route::post('/projects', [ProjectController::class, 'store']);
+Route::get('/projects/{id}', [ProjectController::class, 'show']);
+Route::put('/projects', [ProjectController::class, 'markAsCompleted']);
+Route::get('/tasks', [TaskController::class, 'store']);
+Route::get('/tasks/{task}', [TaskController::class, 'markAsCompleted']);
