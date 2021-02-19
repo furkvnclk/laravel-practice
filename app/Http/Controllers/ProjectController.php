@@ -13,7 +13,7 @@ class ProjectController extends Controller
     {
         $projects = Project::where('is_completed', false)
             ->orderBy('created_at', 'desc')
-            ->withCount(['task' => function ($query) {
+            ->withCount(['tasks' => function ($query) {
                 $query->where('is_completed', false);
             }])->get();
 
