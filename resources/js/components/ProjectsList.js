@@ -19,7 +19,7 @@ class ProjectsList extends Component {
   }
 
   render() {
-    const {projects} = this.state
+    const { projects } = this.state
     return (
       <div className='container py-4'>
         <div className='row justify-content-center'>
@@ -29,17 +29,17 @@ class ProjectsList extends Component {
               <div className='card-body'>
                 <Link className='btn btn-primary btn-sm mb-3' to='/create'>Create New Project</Link>
                 <ul className='list-group list-group-flush'>
-                  {projects.map(project=> (
+                  {projects.map(project => (
                     <Link
-                    className='list-group-item list-group-item-action d-flex justify-content-between align-items-center'
-                    to={`/${project.id}`}
-                    key={project.id}
+                      className='list-group-item list-group-item-action d-flex justify-content-between align-items-center'
+                      to={`/${project.id}`}
+                      key={project.id}
                     >
                       {project.name}
                       <span className='badge badge-primary badge-pill'>
                         {project.tasks_count}
                       </span>
-                    </Link> 
+                    </Link>
                   ))}
                 </ul>
               </div>
