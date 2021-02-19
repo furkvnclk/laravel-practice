@@ -12,8 +12,9 @@ class ProjectsList extends Component {
 
   componentDidMount() {
     axios.get('/api/projects').then(response => {
+      const projects = response.data
       this.setState({
-        projects: response.data
+        projects: projects
       })
     })
   }
